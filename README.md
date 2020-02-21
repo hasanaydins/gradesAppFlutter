@@ -2,6 +2,11 @@
 
 An app to calculate school grades.
 
+
+## Demo
+
+<img src="ss/note.gif" alt="note" width="300">
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.

@@ -56,6 +56,74 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: Drawer(
+        child: Column(
+          children: <Widget>[
+            UserAccountsDrawerHeader(
+              accountName: Text("Hasan Aydın"),
+              accountEmail: Text("hasanaydins@gmail.com"),
+              currentAccountPicture: CircleAvatar(
+                backgroundColor: Colors.grey,
+                child: Text(
+                  "H",
+                  style: TextStyle(color: Colors.white),
+                ),
+              ),
+              /*currentAccountPicture: Image.network(
+                  "https://placeimg.com/640/480/people?t=1578516674688"),*/
+              /*otherAccountsPictures: <Widget>[
+                Image.network(
+                    "https://placeimg.com/640/480/people?t=1578516674688"),
+                CircleAvatar(
+                  backgroundColor: Colors.red,
+                  child: Text("A"),
+                ),
+              ],*/
+            ),
+            Expanded(
+              child: ListView(
+                children: <Widget>[
+                  /*ListTile(
+                    leading: Icon(Icons.info),
+                    title: Text("Hakkında"),
+                    trailing: Icon(Icons.keyboard_arrow_right),
+                    contentPadding: EdgeInsets.fromLTRB(10, 0, 0, 0),
+                  ),
+                  Divider(),
+                  ListTile(
+                    leading: Icon(Icons.info),
+                    title: Text("Hakkında"),
+                    trailing: Icon(Icons.keyboard_arrow_right),
+                    contentPadding: EdgeInsets.fromLTRB(10, 0, 0, 0),
+                  ),
+                  Divider(),
+                  InkWell(
+                    splashColor: Colors.deepPurpleAccent.shade200,
+                    onTap: () {},
+                    child: ListTile(
+                      leading: Icon(Icons.info),
+                      title: Text("Hakkında"),
+                      trailing: Icon(Icons.keyboard_arrow_right),
+                      contentPadding: EdgeInsets.fromLTRB(10, 0, 0, 0),
+                    ),
+                  ),*/
+                  AboutListTile(
+                    icon: Icon(Icons.info),
+                    applicationName: "Not hesapla",
+                    applicationIcon: Icon(Icons.note),
+                    /*  applicationLegalese: "sdds",*/
+                    applicationVersion: "1.0",
+                    child: Text("Hakkımda"),
+                    aboutBoxChildren: <Widget>[
+                      Text("Developed with ♥"),
+                    ],
+                  )
+                ],
+              ),
+            )
+          ],
+        ),
+      ),
       appBar: AppBar(
         title: Text("Not Hesapla"),
       ),
